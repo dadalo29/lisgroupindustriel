@@ -41,7 +41,12 @@
         <div class="ccard"><span class="lbl">Email</span><a class="val" id="mail" href="mailto:contact@lisgroupindustriel.com" style="text-decoration:none">contact@lisgroupindustriel.com</a><button class="copy" id="copyBtn" type="button">Copy address</button></div>
         <div class="ccard"><span class="lbl">Address</span><span class="val">Sud-Foire, Lot 46, VDN</span><span class="sub">Opposite Exclusive supermarket · Dakar, Senegal</span></div>
       </div>
-      <form id="devis" novalidate>
+      <form id="devis" action="https://formsubmit.co/contact@lisgroupindustriel.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Transport quote request – website">
+        <input type="hidden" name="_next" value="https://www.lisgroupindustriel.com/en/thank-you.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <h3 class="full">Transport quote request</h3>
         <label>Company<input name="Company" type="text" required data-soc placeholder="Your company name"></label><label>Name and position<input name="Name and position" type="text" placeholder="e.g. Purchasing manager"></label><label>Email<input name="email" type="email" required placeholder="you@company.com" autocomplete="email"></label><label>Phone<input name="Phone" type="tel" placeholder="+221 …"></label><label>Product<select name="Product"><option>Sulphur / industrial inputs</option><option>Ores / waste rock</option><option>Limestone / clinker / aggregates</option><option>Laterite / sand / gravel</option><option>Other</option></select></label><label>Tonnage per month<input name="Monthly tonnage" inputmode="numeric" placeholder="e.g. 3,000 t"></label><label class="full">Route (from → to)<input name="Route" placeholder="e.g. Port of Dakar → production site"></label><label class="full">Details<textarea name="Details" placeholder="Frequency, loading conditions, desired start date…"></textarea></label>
         <p class="form-legal">Your details are only used to answer your request. See our <a href="privacy.html">privacy policy</a>.</p>

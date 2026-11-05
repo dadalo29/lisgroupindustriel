@@ -41,7 +41,12 @@
         <div class="ccard"><span class="lbl">E-mail</span><a class="val" id="mail" href="mailto:contact@lisgroupindustriel.com" style="text-decoration:none">contact@lisgroupindustriel.com</a><button class="copy" id="copyBtn" type="button">Copier l’adresse</button></div>
         <div class="ccard"><span class="lbl">Adresse</span><span class="val">Sud-Foire, Lot n°46, VDN</span><span class="sub">En face du supermarché Exclusive · Dakar, Sénégal</span></div>
       </div>
-      <form id="devis" novalidate>
+      <form id="devis" action="https://formsubmit.co/contact@lisgroupindustriel.com" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Demande d’offre de transport – site web">
+        <input type="hidden" name="_next" value="https://www.lisgroupindustriel.com/merci.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <h3 class="full">Demande d’offre de transport</h3>
         <label>Société<input name="Société" type="text" required data-soc placeholder="Nom de votre entreprise"></label><label>Nom et fonction<input name="Nom et fonction" type="text" placeholder="Ex. Responsable achats"></label><label>E-mail<input name="email" type="email" required placeholder="vous@entreprise.sn" autocomplete="email"></label><label>Téléphone<input name="Téléphone" type="tel" placeholder="+221 …"></label><label>Produit<select name="Produit"><option>Soufre / intrants industriels</option><option>Minerais / stériles</option><option>Calcaire / clinker / granulats</option><option>Latérite / sable / gravier</option><option>Autre</option></select></label><label>Tonnage par mois<input name="Tonnage mensuel" inputmode="numeric" placeholder="Ex. 3 000 t"></label><label class="full">Trajet (départ → arrivée)<input name="Trajet" placeholder="Ex. Port de Dakar → site de production"></label><label class="full">Précisions<textarea name="Précisions" placeholder="Fréquence, conditions de chargement, date de démarrage souhaitée…"></textarea></label>
         <p class="form-legal">Vos informations servent uniquement à répondre à votre demande. Voir notre <a href="confidentialite.html">politique de confidentialité</a>.</p>

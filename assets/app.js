@@ -60,18 +60,10 @@
   var f=document.getElementById('devis');
   if(f){
     var DEST='contact@lisgroupindustriel.com';
-    f.addEventListener('submit',function(e){
-      e.preventDefault(); var ok=document.getElementById('ok'), btn=f.querySelector('button[type=submit]');
-      if(!f.reportValidity()) return;
-      var fd=new FormData(f);
-      fd.append('_subject',T.subj+(fd.get(f.querySelector('[data-soc]').name)||'site web'));
-      fd.append('_template','table'); fd.append('_captcha','false');
-      btn.disabled=true; ok.hidden=false; ok.textContent=T.sending;
-      fetch('https://formsubmit.co/ajax/'+DEST,{method:'POST',headers:{'Accept':'application/json'},body:fd})
-        .then(function(r){return r.json();})
-        .then(function(j){ if(String(j.success)==='true'){ok.textContent=T.ok;f.reset();} else throw 0; })
-        .catch(function(){ok.textContent=T.ko+DEST+'.';})
-        .finally(function(){btn.disabled=false;});
+    f.addEventListener('submit',function(){
+      var soc=f.querySelector('[data-soc]').value.trim(), sj=f.querySelector('[name=_subject]');
+      if(soc) sj.value=T.subj+soc;
+      var btn=f.querySelector('button[type=submit]'); btn.disabled=true; var ok=document.getElementById('ok'); ok.hidden=false; ok.textContent=T.sending;
     });
     var cb=document.getElementById('copyBtn');
     cb.addEventListener('click',function(){
